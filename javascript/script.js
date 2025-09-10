@@ -5,11 +5,13 @@ const taskList = document.querySelector("#tasks-list")
 const notification = document.querySelector("#notification")    
 const checkedTaskList = document.querySelector("#checked-tasks-list")
 const checkTasksButton = document.querySelector('#checked-tasks-btn')
+const checkedTasksSection = document.querySelector("#checked-tasks-div")
 const taskArray = []
 const checkTaskArray = []
 
 addButton.addEventListener('click', addTask)
-checkTasksButton.addEventListener('click', checkTask)
+checkTasksButton.addEventListener('click', showCheckedTasksList)
+
 
 function addTask(event) {
     event.preventDefault()
@@ -74,10 +76,26 @@ function checkTask(event) {
 
     displayNotification("Task checked successfully", "success-msg")
     renderTasks()
+    renderCheckedTasks()
 }
 
 function renderCheckedTasks() {
-       
+    checkedTaskList.innerHTML = ''
+    console.log(checkTaskArray)
+
+    for (let i = 0; i < checkTaskArray.length; i++) {
+        const checkedTask = checkTaskArray[i]
+
+        const li = document.createElement("li")
+        li.textContent = `• ${checkedTask}`
+        
+        checkedTaskList.appendChild(li)
+    }
+
+}
+
+function showCheckedTasksList() {
+    checkedTasksSection.classList.toggle("hidden")
 }
 
 function displayNotification(message, className) {

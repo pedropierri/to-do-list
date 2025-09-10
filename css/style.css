@@ -109,6 +109,7 @@ h1 {
 }
 
 #checked-tasks-div {
+    
     padding: 30px;
     background-color: #4c60af;
     width: 100%;
@@ -128,9 +129,31 @@ h1 {
 
 }
 
-.checked-task {
+#checked-tasks-list li {
     background-color: white;
     padding: 3px;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#checked-tasks-btn {
+    width: 150px;
+    height: 30px;
+
+    padding: 5px;
+    margin: 20px 0px;
+ 
+    border: none;
+    border-radius: 5px;
+    outline: none;
+
+    color: white;
+    background-color: #4c60af;
+    font-size: 15px;
+
+    cursor: pointer;
 }
