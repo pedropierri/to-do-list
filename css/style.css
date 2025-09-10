@@ -10,6 +10,7 @@ body {
     background-color: var(--bg-color);
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -79,4 +80,17 @@ h1 {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+/* ----- Notification ----- */
+#notification-div {
+    display: flex;
+}
+
+.error-msg {
+    color: #e74c3c;
+}
+
+.sucess-msg {
+    color: #45dd2e;
 }
