@@ -7,6 +7,10 @@ addButton.addEventListener('click', addTask)
 console.log("fora")
 
 function addTask(event) {
+    let newTask
     event.preventDefault()
     console.log("hi")
+    console.log(inputNewTask)
+
+    newTask = inputNewTask.value
 }
