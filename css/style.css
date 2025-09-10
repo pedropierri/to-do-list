@@ -74,12 +74,19 @@ h1 {
 }
 
 #tasks-list li button {
-    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.check-btn {
+    background-color: rgb(71, 197, 109);
+}
+
+.delete-btn {
+    background-color: #cf3a3a;
 }
 
 /* ----- Notification ----- */
