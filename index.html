@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="notification-div">
-        <h2 id="notification">Notificação</h2>
-    </div>
     <div class="container">
+        <div id="notification-div">
+            <h2 id="notification"></h2>
+        </div>
         <h1>Task Manager</h1>
         <form id="tasks-form">
             <input type="text" id="new-task" placeholder="Add a new task...">
@@ -21,8 +21,13 @@
             
         </ul>
     </div>
-    <divc>
-
+    <button>Checked Tasks</button>
+    <div id="checked-tasks-div">
+        <h2>Realized Tasks</h1>
+        <ul id="checked-tasks-list">
+            <li class="checked-task">• asd</li>
+            <li class="checked-task">• 12</li>
+        </ul>
     </div>
     <script src="javascript/script.js"></script>
 </body>

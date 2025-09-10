@@ -18,7 +18,7 @@ function addTask(event) {
 
         
         renderTasks()
-        displayNotification("Task added successfully", "sucess-msg");
+        displayNotification("Task added successfully!", "success-msg");
     } else {
         displayNotification("Enter a task!", "error-msg")
     }   
@@ -38,6 +38,11 @@ function renderTasks() {
         deleteButton.textContent = "Remove Task"
         deleteButton.setAttribute('data-index', i)
         deleteButton.addEventListener('click', removeTask)
+
+        const checkButton = document.createElement("button")
+        checkButton.textContent = "Check"
+        checkButton.setAttribute('data-index', i)
+        checkButton.addEventListener('click', checkTask)
         
         li.appendChild(deleteButton)
 
@@ -50,13 +55,25 @@ function removeTask(event) {
 
     taskArray.splice(index, 1)
 
+    displayNotification("Task removed successfully!", "success-msg")
     renderTasks()
+}
+
+function checkTask(event) {
+    const index = event.target.getAttribute('data-index')
+
+    taskArray.splice(index, '')
+
+    displayNotification("Task checked successfully", "success-msg")
+    renderTasks()
+}
+
+function tasksRealizadas() {
+    
 }
 
 function displayNotification(message, className) {
     notification.className = ''
     notification.classList.add(className)
     notification.textContent = message
-
-    123
 }
