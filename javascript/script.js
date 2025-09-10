@@ -18,10 +18,9 @@ function addTask(event) {
 
         
         renderTasks()
-        displayNotification("Tarefa adicionada com sucesso", "sucess-msg");
+        displayNotification("Task added successfully", "sucess-msg");
     } else {
-        notification.classList.add("error-msg")
-        notification.textContent = "Enter a task!"
+        displayNotification("Enter a task!", "error-msg")
     }   
 }
 
@@ -52,4 +51,12 @@ function removeTask(event) {
     taskArray.splice(index, 1)
 
     renderTasks()
+}
+
+function displayNotification(message, className) {
+    notification.className = ''
+    notification.classList.add(className)
+    notification.textContent = message
+
+    123
 }
