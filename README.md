@@ -10,5 +10,5 @@ A simple to-do list for your personal organization. The manager features a separ
 <img width="1002" height="800" alt="image" src="https://github.com/user-attachments/assets/577e2b12-0f57-4d5e-95cf-9243c48df4db" />
 
 <h2>How to Use 🖥️</h2>
-1. Clone the repository using git clone 'https://github.com/pedropierri/to-do-list.git
+1. Clone the repository using git clone 'https://github.com/pedropierri/to-do-list.git <br>
 2. Open the "index.html" file
